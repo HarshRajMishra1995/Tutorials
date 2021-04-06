@@ -78,22 +78,91 @@
     // switch(a>=2){
     //     case a:
     //     console.log("good")
-    //     break;
+    //     break
     //     default:
     //     console.log("nahi pata")
     // }
 
-    //For in loop . used for iterating over object
+    //For in loop . used for iterating over object ----------------------------------
 
-    let obj={a:1,b:2,c:3,d:4}
+    // let obj={a:1,b:2,c:3,d:4}
+    // for( let o in obj)
+    // {
+    //     //for keys values in the objects
+    //     console.log(obj[o])
+    // }
+    // for( let k in obj)
+    // {
+    //     //for keys in the objects
+    //     console.log(k)
+    // }
 
-    for(let o in obj)
-    {
-        //for values we use this way
-        console.log(obj[o])
-       //for keys we use this way
-       console.log(o)
-    }
+   //For of loop --------------------------------------------------------------------
+    //In array if we use for-in loop then it prints the indexes of the array
+//    let arr=[1,2,3,4,5]
+//    for(let i of arr)
+//    {
+//        console.log(i)
+//    }
+
+    //unary negations --------------------------------------------------------------
+    // let y=10
+    //  console.log(-y)
+
+    //  let x=-10
+    //  console.log(-x)
+
+    //Post and pre increments/decrements----------------------------------------------
+    // let x=4
+    // console.log(x)
+    // ++x;
+    // console.log(x)
+
+    //Strict and abstract equality----------------------------------------------------
+
+     //strict equality is checked by (===) . this checks type as well as value
+     //abstract equality is checked by (==) . this checks on values not type
+
+     //Not strict equality is checked by(!==) .
+     //Not abstract equality is checked by(!=).
 
 
+     //Destructuring objects-----------------------------------------------------------
 
+    //  let obj={a:1,b:2,c:3,d:4}
+    //  let {a,b,c,d}=obj;
+    //  console.log(d)
+
+    // let arr=[1,2,3,4,5,6]
+    // let[a,b,c,d,...rest]=arr   /// (...rest) is called as dot seperator
+    // console.log(a)
+    // console.log(c)
+    // console.log(rest)
+
+    //javascript operator precedence ---------------------------------------------------
+
+    //highest to low is : () , / , * , + , -
+
+    //javascript operators------------------------------------------------------------
+    //(.) dot is know as member access property. We use it to validate objects member
+     let obj={car1:"BMW",car2:"Audi",car3:"Ford"}
+
+     console.log(obj.car3);
+     //console.log(obj.car4)
+
+     // in operator is used to validate whter left side property is present in the object or not
+
+     console.log("car3" in obj)
+     console.log("car4" in obj)
+
+     //new operator is used to create instance of an user defined objects
+
+     class model{
+         constructor()
+         {
+
+         }
+     }
+
+     let obj1=new model();
+     let obj2=new model();
