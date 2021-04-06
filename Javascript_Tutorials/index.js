@@ -145,24 +145,183 @@
 
     //javascript operators------------------------------------------------------------
     //(.) dot is know as member access property. We use it to validate objects member
-     let obj={car1:"BMW",car2:"Audi",car3:"Ford"}
+    //  let obj={car1:"BMW",car2:"Audi",car3:"Ford"}
 
-     console.log(obj.car3);
+    //  console.log(obj.car3);
      //console.log(obj.car4)
 
      // in operator is used to validate whter left side property is present in the object or not
 
-     console.log("car3" in obj)
-     console.log("car4" in obj)
+    //  console.log("car3" in obj)
+    //  console.log("car4" in obj)
 
      //new operator is used to create instance of an user defined objects
 
-     class model{
-         constructor()
-         {
+    //  class model{
+    //      constructor()
+    //      {
 
-         }
-     }
+    //      }
+    //  }
 
-     let obj1=new model();
-     let obj2=new model();
+    //  let obj1=new model();
+    //  let obj2=new model();
+
+    //instanceof operator---------------------------------------------------------------------------------
+    // //This operator is used to validate instance membership of userdefined objects.It gives boolean value.
+
+    // let mydate=new Date();
+    // console.log(mydate instanceof Date);
+
+    // const arry=[1,2,3,4,5];
+    // console.log(arry instanceof Array);
+    // console.log(arry instanceof Date)
+
+    //Delete operator-------------------------------------------------------------------------------
+
+    // let objs={a:"hi",b:"hello",c:"bye"}
+
+    // console.log("a" in objs);
+
+    // delete objs.a
+
+    // console.log("a" in objs);
+
+    // let arr=[1,2,3,4,5,6]
+
+    // console.log(arr[0])
+
+    // delete arr[0]
+    // console.log(arr[0])
+
+    //Ternary operator----------------------------------------------
+
+    // let x=1;
+    // y=x>2?"greater":"smaller"
+    // console.log(y)
+
+    //Jump Statement----------------------------------------------------------
+
+    //first one is Break statement .It is used to break the execution flow on meeting certain condition
+
+    // for(let i=0;i<=5;i++)
+    // {
+    //     if(i==3) break;
+    //     console.log(i)
+    // }
+
+    //break labelled statement
+
+    //syntax
+
+    //break labelname;
+
+    //syntax for labelled statement is
+
+    // identifier:statement
+
+    // label:for(let i=0;i>=0;i++)
+    // {
+    //     console.log(i)
+    //     break label;
+    // }
+
+    //continue statement --------------------------------------------------------------
+      //basically used to skip the steps of executions for matching conditions
+    //syntax is continue
+
+    // it is also used as continue labelled statements
+
+    // for(let i=0;i<=10;i++)
+    // {
+    //     if(i==5) continue;
+    //     console.log(i)
+    // }
+
+    // label:for(let i=0;i<=10;i++)
+    // {
+    //     if(i==5)
+    //     continue label;
+    //     console.log(i)
+    // }
+
+    //function call using objects---------------------------------
+
+    // function magic()
+    // {
+    //     return "hello magic"
+    // }
+
+    // let obj={
+    //    // f:magic()
+    //    f:magic
+    // }
+    // //console.log(obj.f);
+    // console.log(obj.f());
+
+
+    //Default argument passing in the function------------------------------------
+
+    // function pass(x=3)
+    // {
+    //     return `The function value is :${x}`;
+    // }
+
+    //console.log(pass()) //no value is passing so undefined will be the output
+
+    //console.log(pass()) //here also no value is passed but default value is being passed in the function so it gives output
+
+    //console.log(pass(5)) //here value is passed so it will override the default value and gives the output.
+
+    //Anonymous function
+   
+    //it has no identifier for its calling
+
+    // let f=function()
+    // {
+    //     //anonymous function assigned to variable f
+    //     return "you called me!!!"
+    // }
+
+    // console.log(f());
+  
+    //Anonymous functions are mainly used inside objects as an property-----------------------------------------------------
+
+    // let obj={
+    //     name:"anonymous function",
+    //     // fun:function()
+    //     // {
+    //     //     return "you called me"
+    //     // }
+    //     fun()  //This we can do directly according to es6 version
+    //     {
+    //         return "you called me"   
+    //     }
+    // }
+    // console.log(obj.fun())
+
+    //Arrow Functions---------------------------------------------------------------------------------------------------
+
+    //1. with arrow functions we can omit the function keyword
+    //2. if we have single argument to pass then we can omit paranthesis in arrow functions
+    //3. if we have single return statement then we can omit curly braces also
+
+    // let f=x=>"hello!!!!!!";
+
+    // console.log(f(2))
+
+    //Destructuring arguments passing to the functions
+    //using objects and arrays
+
+    const o={
+        w1:"Daily",
+        w2:"practice",
+        w3:"code"
+    };
+
+   function getData({w1,w2,w3})
+   {
+       return `${w1} ${w2} ${w3}`;
+   }
+
+   console.log(getData(o));
