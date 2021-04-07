@@ -481,9 +481,16 @@
 //This method used to insert and remove elements from an array at desired index
 //on insertion it take 3 args (start index,no of element to delete,items to be inserted)
 //on deletion it take 2 args(start index,no of element to delete)
-var arr=[1,4,5,6]
+// var arr=[1,4,5,6]
+// console.log(arr)
+// arr.splice(1,0,2,3)
+// console.log(arr)
+// arr.splice(1,2)
+// console.log(arr)
+
+//copyWithin method
+//So this method three args as(startindex,copyfromindex,copytillindex)
+const arr=[1,2,3,4,5,6,7,8,9]
+arr.copyWithin(1,2,5);
 console.log(arr)
-arr.splice(1,0,2,3)
-console.log(arr)
-arr.splice(1,2)
-console.log(arr)
+//it replaces the element of copyfromindex and copy the elements from that position
