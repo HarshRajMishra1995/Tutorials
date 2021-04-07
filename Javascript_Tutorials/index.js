@@ -464,20 +464,20 @@
 // console.log(arr[1][0].subject)
 // console.log(arr[2][0]())
 
-//concat method
+//concat method-----------
 //This method add elements at the last of the array.
 //After adding elements at the last this method returns original array.
 // const arr=[1,2,3]
 // console.log(arr.concat(4,5,6))
 
-//slice method
+//slice method-------------
 //This method is used to sub array from an array
 //  const arr2=[1,2,3,4,5]
 //  console.log(arr2.slice(2,4))
 // console.log(arr2.slice(-1))
 //It starts slice from start index so it include start index but not last index
 
-//splice method
+//splice method--------------
 //This method used to insert and remove elements from an array at desired index
 //on insertion it take 3 args (start index,no of element to delete,items to be inserted)
 //on deletion it take 2 args(start index,no of element to delete)
@@ -488,9 +488,35 @@
 // arr.splice(1,2)
 // console.log(arr)
 
-//copyWithin method
+//copyWithin method------------
 //So this method three args as(startindex,copyfromindex,copytillindex)
-const arr=[1,2,3,4,5,6,7,8,9]
-arr.copyWithin(1,2,5);
-console.log(arr)
+// const arr=[1,2,3,4,5,6,7,8,9]
+// arr.copyWithin(1,2,5);
+// console.log(arr)
 //it replaces the element of copyfromindex and copy the elements from that position
+//arr.copyWithin(1,-1) //start from 1 index and -1 denotes end of the array
+
+
+//fill method-----------------
+//it fills the array with static value
+//takes three args (staticvalue,startindex,endindex)
+// const arr1=[1,2,3,4,5]
+// // arr1.fill("d")
+// // console.log(arr1);
+// arr1.fill("d",1,4);
+// console.log(arr1)
+
+//map method--------------------
+
+const arr=[1,2,4,8];
+
+const maparr=arr.map(x=>x+2)
+console.log(maparr)
+
+const arr1=[
+    {product:"tv",price:15000},
+    {product:"car",price:18000}
+]
+const maparr1=arr1.map(x=>x.price)
+//const maparr1=arr1.map(x=>x.price>2000) on putting condition to the map function we get boolean value as an output for each corresponding property elements
+console.log(maparr1)
