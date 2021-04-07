@@ -310,18 +310,180 @@
 
     // console.log(f(2))
 
-    //Destructuring arguments passing to the functions
+    //Destructuring arguments passing to the functions------------------------------------------------------
     //using objects and arrays
 
-    const o={
-        w1:"Daily",
-        w2:"practice",
-        w3:"code"
-    };
+//     const o={
+//         w1:"Daily",
+//         w2:"practice",
+//         w3:"code"
+//     };
 
-   function getData({w1,w2,w3})
-   {
-       return `${w1} ${w2} ${w3}`;
-   }
+//    function getData({w1,w2,w3})
+//    {
+//        return `${w1} ${w2} ${w3}`;
+//    }
 
-   console.log(getData(o));
+//    console.log(getData(o));
+
+//    const arr=[1,2,3,4,5,6]
+
+//    function getelements([a,b,c,d,...rest])
+//    {
+//        return `${a} ${b} ${c} ${d} ${rest}`
+//    }
+
+//    console.log(getelements(arr))
+
+//call() method ---------------------------------------------------------
+
+// const obj={name:"harsh", class:"btech"}
+// const obj1={name:"shruti" ,class:"mba"}
+
+// function magic()
+// {
+//     return `Welcome ${this.name} of class ${this.class}`;
+// }
+
+// console.log(magic.call(obj1));
+
+//call method uses the property of object which it is passed and bind it with this keyword in the function
+
+
+//closures ---------------------------------------------------------------------
+
+// function counter()
+// {
+//     let count=0;
+
+//     return function(){
+//         return count++;
+//     }
+// }
+
+// console.log(count)
+// let cot=counter()
+
+// console.log(cot())
+// console.log(cot())
+// console.log(cot())
+// console.log(cot())
+
+// function counter()
+// {
+//     count =10;
+//     return function()
+//     {
+//         return count;
+//     };
+// }
+
+// //console.log(counter())
+
+// function incounter()
+// {
+//     count=100000;
+//     return count++;
+// }
+
+// console.log(incounter())
+// console.log(incounter())
+// const c=counter()
+// console.log(c())
+
+//With closure we can save our variable to used by any other function 
+// let cl;
+// {
+//     let obj={name:"char"}
+//    cl=()=>{
+//        return obj
+//    }
+// }
+// let p=cl()
+// console.log(p.name)
+
+//IIFE stands for immediately invoked function expression
+
+//1.
+// (function(){
+//     console.log("hi")   //We put whole function body inside a paranthesis
+// })();                   //Then we use () just after closing paranthesis for its invocation
+
+//2.
+// var p=(function(){
+//     return "hi"
+// });
+// console.log(p())
+// //3.
+// console.log((function(){
+//     return "hi"
+// })())
+//we can also use closure with it.
+
+
+//strict mode ----------------------------------------------------------------------
+
+// "use strict";
+
+// x=20;
+// console.log(x)
+
+// function magic()
+// {
+//     "use strict";
+//     x=20;
+//     console.log(x)
+// }
+
+// magic()
+
+//strict mode removes direct use of variable without its proper declaration
+
+//Arrays-----------------------------------------------------------------
+
+//Non homogenous array containing array
+
+// const arr=[
+//     {name:"Daily",No:39},
+//     [
+//         {name:"Tutorials",subject:"array"},
+//         {name:"Tutorials",subject:"Literals"}
+//     ],
+//     [
+//         function(){
+//             return " Iam array function"
+//         }
+//     ]
+// ];
+// console.log(arr[0])
+// console.log(arr[0].name)
+// console.log(arr[0].No)
+// console.log(arr[1])
+// console.log(arr[1][0])
+// console.log(arr[1][0].name)
+// console.log(arr[1][0].subject)
+// console.log(arr[2][0]())
+
+//concat method
+//This method add elements at the last of the array.
+//After adding elements at the last this method returns original array.
+// const arr=[1,2,3]
+// console.log(arr.concat(4,5,6))
+
+//slice method
+//This method is used to sub array from an array
+//  const arr2=[1,2,3,4,5]
+//  console.log(arr2.slice(2,4))
+// console.log(arr2.slice(-1))
+//It starts slice from start index so it include start index but not last index
+
+//splice method
+//This method used to insert and remove elements from an array at desired index
+//on insertion it take 3 args (start index,no of element to delete,items to be inserted)
+//on deletion it take 2 args(start index,no of element to delete)
+var arr=[1,4,5,6]
+console.log(arr)
+arr.splice(1,0,2,3)
+console.log(arr)
+arr.splice(1,2)
+console.log(arr)
