@@ -507,16 +507,131 @@
 // console.log(arr1)
 
 //map method--------------------
+// const arr=[1,2,4,8];
+// const maparr=arr.map(x=>x+2)
+// console.log(maparr)
+// const arr1=[
+//     {product:"tv",price:15000},
+//     {product:"car",price:18000}
+// ]
+// const maparr1=arr1.map(x=>x.price)
+// //const maparr1=arr1.map(x=>x.price>2000) on putting condition to the map function we get boolean value as an output for each corresponding property elements
+// console.log(maparr1)
 
-const arr=[1,2,4,8];
+//Advance javascript
 
-const maparr=arr.map(x=>x+2)
-console.log(maparr)
+//class
+// class Model{
+//     constructor()
+//     {
 
-const arr1=[
-    {product:"tv",price:15000},
-    {product:"car",price:18000}
-]
-const maparr1=arr1.map(x=>x.price)
-//const maparr1=arr1.map(x=>x.price>2000) on putting condition to the map function we get boolean value as an output for each corresponding property elements
-console.log(maparr1)
+//     }
+// }
+// let obj=new Model()
+// console.log(obj instanceof Model)
+
+//parameterized constructor in the class
+// class Model{
+//     constructor(name,dept)
+//     {
+//         this.name=name;
+//         this.dept=dept;
+//     }
+//     show()
+//     {
+//         console.log(`Name is ${this.name} and the department is ${this.dept}`)
+//     }
+// }
+
+// let obj=new Model("harsh","cse")
+// obj.show()
+// console.log(obj)
+
+//Object prototyping is used to add properties to an object
+//when we create an instance of any function , so with the help of
+//new keyword we creates object instance of it thereafter we use prototype method
+//to add properties to the object.
+
+//  let f=function(){
+//      console.log("hello")
+//  }
+
+//  const obj=new f();
+
+//  obj.c="new"
+//  obj.d="newer"
+//  console.log( obj)
+
+// var obj={
+//     name:"harsh",
+//     class:"12th
+// }
+// console.log(obj)
+// obj.dept="cse"  ///adding propeties to normal object
+// console.log(obj)
+
+//static method----------------------
+//static methods are those which are called directlty by class name
+//they dont require class instance for their calling
+// we  cannot use/call static method inside non static method
+// But we can use constructor for calling static method 
+
+// class Mystatic{
+//     constructor()
+//     {
+//         console.log("This is constructor method calling static method inside it===>",Mystatic.oncall())
+//     }
+//     static oncall()
+//     {
+//         return "This is a static call"
+//     }
+//     static onbetweencall(){
+//         return `This is inside static calling outside static.${this.oncall()}`
+//     }
+// }
+// const st=new Mystatic();
+
+// console.log(Mystatic.onbetweencall())
+
+//class inheritance-----------------------------
+// class Person{
+//     constructor(name,gender)
+//     {
+//         this.name=name;
+//         this.gender=gender
+//     }
+// }
+
+// class student extends Person{
+//     constructor(age)
+//     {
+//         super("harsh","male")
+//         this.age=age;
+//     }
+//     showup()
+//     {
+//         return `A new student is created with name ${this.name} having age ${this.age}`
+//     }
+// }
+
+// const stud=new student(24);
+// console.log(stud.showup());
+
+//Object Prototype inheritance------------------
+// using __proto__ we can inherit one object into another object
+// var vehicle={
+//   model:"tesla"
+// }
+// var bike={
+//     name:"hero"
+// }
+
+// var car={
+//     __proto__:vehicle  ///this way also we can inherit one object with another object
+// }
+
+// bike.__proto__=vehicle;
+// console.log(bike.name);
+// console.log(bike.model);
+// console.log(car.model)
+
