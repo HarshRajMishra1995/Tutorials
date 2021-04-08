@@ -712,9 +712,9 @@
 // let reg=new RegExp()//it take 2 arguments (pattern,flags)
 // console.log(reg)
 
-// short syntax 
+// short syntax
 // let reg=/pattern/;    //without flags
-// let reg=/pattern/flags; //with flags 
+// let reg=/pattern/flags; //with flags
 
 //Dom with javascript------------------------
 // let p=document.getElementsByTagName("p")
