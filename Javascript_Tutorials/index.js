@@ -633,5 +633,41 @@
 // bike.__proto__=vehicle;
 // console.log(bike.name);
 // console.log(bike.model);
-// console.log(car.model)
+// console.log(car.model);
 
+//Polymorphism in javascript-------------------------------
+
+// class Employee{
+//     constructor(name,gender)
+//     {
+//      this.name=name;
+//      this.gender=gender;
+//     }
+//     createMember()
+//     {
+//         console.log("hello i am parent class method")
+//     }
+// }
+
+// class member extends Employee{
+//     constructor(age)
+//     {
+//         super("Harsh","Male")
+//         this.age=age;
+//     }
+//     createMember() {            //This method overrides parent class methods
+//         console.log(`The New Member name is ${this.name} has age ${this.age} of gender ${this.gender}`);
+//     }
+// }
+
+// const mm=new member(24)
+
+// mm.createMember();
+
+//Object.toString() methods-----------------
+//It is used to convert object into string
+// const dt=new Date()
+// console.log(dt);
+// console.log(typeof dt);
+// console.log(dt.toString())
+// console.log(typeof dt.toString())
