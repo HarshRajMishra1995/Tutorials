@@ -671,3 +671,104 @@
 // console.log(typeof dt);
 // console.log(dt.toString())
 // console.log(typeof dt.toString())
+
+//Map and its methods---------------------
+// const mymap=new Map();
+// const keyString="keystring",
+// keyobj={},
+// keyfunction=function(){console.log("hello")};
+// mymap.set(keyString,"keystring value")
+// mymap.set(keyobj,{name:"ram",lastname:"shyam"})
+// mymap.set(keyfunction,"keyfunc value")
+// mymap.get(keyfunction())
+// console.log(mymap.get(keyobj).name)
+// console.log(mymap.get(keyString))
+
+//Iteration over Map Method
+// for(let [key,value] of mymap)
+// {
+//     console.log(`Mapkeys:${key} Mapvalues:${value}`);
+// }
+
+//weakmap----------------------------------
+
+// let weakMap=new WeakMap();
+// let obj={},obj1={}
+
+// //set weakmap key and value
+// weakMap.set(obj,"Private");
+// weakMap.set(obj1,"Private Data");
+
+// console.log(weakMap.get(obj))
+
+// for(let [key,value] of weakMap) //WeakMap is not iterateable because it makes the key as a private
+// {
+//     console.log(`The key is ${key} and value is ${value}`)
+// }
+
+//Regular expressions-------------------------------------------
+//Used to search a pattern in a string..
+
+// let reg=new RegExp()//it take 2 arguments (pattern,flags)
+// console.log(reg)
+
+// short syntax 
+// let reg=/pattern/;    //without flags
+// let reg=/pattern/flags; //with flags 
+
+//Dom with javascript------------------------
+// let p=document.getElementsByTagName("p")
+// console.log(p)
+//we can access any dom element with javascript
+
+//Document methods-------------------------------------------
+//QuerySelector()
+//QuerySelectorAll()
+// const head=document.querySelector(".heading")
+// console.log(head)
+// head.innerHTML="hello heading" //through this we can change text value between html elements
+
+// const newhead=document.querySelectorAll(".heading") //it return all elemnts with same class name in a node list form
+// console.log(newhead)
+// console.log(newhead[0])//to access each node list value
+// newhead[0].innerHTML="hello javascript"
+
+// const d=document.querySelector(".mydiv");
+// console.log(d)
+//d.innerHTML="hello div"
+//applying styling to the div elements
+// d.style.backgroundColor="red"
+// d.style.padding="2px"
+
+//applying styling using classlist method
+// const d=document.querySelector(".mydiv");
+// d.innerHTML="hello div"
+// d.classList.add(".mydiv")
+
+//document.createElement(tagName)--------------------------------
+
+let p=document.createElement("p");
+console.log(p)
+p.textContent="first paragraph";
+p.textContent="second paragraph";
+
+const content=document.querySelector(".mydiv");
+content.appendChild(p) //appending the paragraph with div
+
+document.body.appendChild(p) //if we want to append it in the body
+
+
+//adding eventListener---------------------------------------------
+
+const d=document.querySelector(".btn");
+
+document.querySelector(".btn").addEventListener("click",()=>{
+    alert("heelo")
+
+    document.querySelector("p").style.backgroundColor="green";
+})
+
+//Jquery
+//we use $ sign for document.queryselector for selecting any elements in jquery
+
+///Javascript -------over
