@@ -1,0 +1,63 @@
+/* h2{
+    color: red;
+} */
+
+.aboutme{
+    color:blue;
+}
+#subtitle{
+    color: green
+}
+ li:nth-child(2){         /* with nth-child we can access which ever list item we want  we put the number to which we want the child to be styled*/
+    color: brown        /* For accessing first child it will be first-child*/
+} 
+
+ li:only-child{         /* with only child we can access the li which is only the child of a list*/
+    color: darkgreen 
+} 
+
+/* .googlelink:link{
+    color: yellowgreen
+}
+.googlelink:visited{
+    color: magenta
+} */
+/* Advance selectors -------------------------------------*/
+
+h2+a{                       /* This says all <a> tag that follows just after h2 tag*/
+    color: steelblue
+}
+
+textarea ~ button{          /*This says all the buttons that follows textarea having same parent in this case <form> is the parent*/
+    color: purple
+}
+
+ul>li{                      /*This says every li which is child of ul. It is parent child relationships.*/
+    color: blue            /* Here specificity rule will also come into play*/
+}
+
+ul li{
+    color: green           /*This says every li which is inside ul no matter if inside ul-->ol and its li is also present*/
+}
+
+/*attritbute selectors*/
+
+/*
+syntax will be
+
+element[attribute=attributevalue]
+
+*/
+
+h2[class=subtitle]          /*This says all the h2elements that hav */
+{
+    color:orange
+}
+
+img[src^="./image/img-1.jpe"]{         /*so before = sign we have to add ^ i.e a carriage*/
+                                      /* we can use * also before = sign which means it finds the value in the src anywhere in the double quotes*/
+    border:10px solid black
+}
+
+/* There are more no of ways to select attribute  */
+
