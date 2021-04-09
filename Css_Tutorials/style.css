@@ -1,6 +1,9 @@
 body{
-    background: rgb(199, 238, 255); /* it is good to use rgb rather than hex code because it flexible in changing color values */
+    /* background: rgb(199, 238, 255); it is good to use rgb rather than hex code because it flexible in changing color values */
     /* background: url("image url") */
+    background: rgba(199, 238, 255,0.4); /*The last value is alpha which used for backgroud transparency or opacity.Its value is between 0 and 1 where 0 means 0% and 1 means 100%*/
+    text-transform: capitalize;
+    text-align: justify
 }
 #title{
     color: rgb(214, 151, 43)
@@ -8,4 +11,29 @@ body{
 
 .subtitle{
     color: rgb(235, 180, 87)
+}
+#service-image{
+    height: 400px;
+    width:85%;
+    /* background: url("./image/img-2.jpeg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover;      it reduces the image quality and covers the whole div space */
+    background-color: steelblue;
+    /*Linear gradient work in linear fashion along all four direction and for diagonal we use like bottom right,bottom left,top left top right*/
+    /* background: linear-gradient(to bottom right,rgb(126, 245, 66),rgba(126, 245, 66,0));  */
+    /* background: linear-gradient(-20deg,rgb(126, 245, 66),rgba(126, 245, 66,0))  we can use angle values in degree also for rotating the gradient */ 
+    background: radial-gradient(circle,red 20%,blue 40%,green 55%)
+}
+
+.googlelink{
+    text-decoration: underline;
+}
+
+#about-us-image{
+    height: 300px;
+    width: 60%;
+    border:2px solid black;
+    padding:20px 30px 20px 30px;
+    margin:40px;
+    /*margins and padding follows this order top,left,bottom,right*/
 }
