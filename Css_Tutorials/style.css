@@ -37,3 +37,114 @@ body{
     margin:40px;
     /*margins and padding follows this order top,left,bottom,right*/
 }
+.site-table{
+    /* display: none; */ /* the none value in display makes element display off from the web page*/
+   display: inline-block;
+}
+
+.container-item{
+    width:30px;
+    text-align:center;
+    line-height: 80px;
+    color: green;
+    background-color: orange;
+    margin:10px;
+    font-size: 20px;
+    
+}
+.container{
+    display:flex;
+    flex-direction:row;
+    background: white;
+    margin:10px;
+    flex-wrap: wrap-reverse;
+    /* wrap is basically for wrapping the flex content
+    if it is exceeding the content boundary.
+    Wrap-reverse is to reverse the content after wrapping it
+     */
+    justify-content: space-around;
+    /*
+    space around provides spacing between all divs from either sides
+    space between provides spacing between the divs from each other.
+    space evenly provides spacing around all divs in even fashion.
+    */
+    align-items: center;
+
+    /*flex-grow:"value" is for equally increase the size of flex items
+      flex-shrink:"value" is for equally shrinking the size of flex items
+    */
+}
+
+/*Grid in css*/
+
+.grid-container{
+    background: rgb(250,250,250);
+    margin:10px;
+    height: 300px;
+    display: grid;
+    /* grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 100px 100px ; */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 100px ;
+}
+
+.grid-item{
+    line-height:20px;
+    width:50px;
+    margin:10px;
+    text-align: center
+}
+form{
+   margin:2px
+
+}
+.submit-button{
+background-color: rgb(69, 170, 181);
+width:80px;
+line-height: 40px;
+transition: background,width 1s ease-in;
+/*
+sometimes transitions does not work with old versions of browsers
+so in that case we have to use browser support prefix in front of the transitions
+These browser support prefixes are differ according to the browser.
+such as
+-webkit-transition:background 3s ease ---->This  browser support prefixes are for safari
+-moz-transition:background 3s ease ---> this is for mozilla firefox
+-o-transitions:background 3s ease -----> this is for opera
+*/
+}
+
+.submit-button:hover{
+    background: rgb(199, 233, 237);
+   width: 140px;
+}
+#about-me{
+    animation-name: red-to-black;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    /*
+    short hand for animation is
+    animation: animation-name,animation duration,animation-delay,animation-timing-function,animation-iteration-count,animation-direction.
+    we can add brower support prefixes also with these animations
+    */
+}
+@keyframes red-to-black{
+    0%{
+        background: red;
+        transform: translate(0px,0px);
+    }
+    33%{
+        background: yellow;
+        transform: translate(10px,10px);
+    }
+    66%{
+        background: blue;
+        transform:translate(20px,20px)
+    }
+    100%{
+        background:black;
+        transform:translate(30px,30px)
+    }
+}
