@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Tutorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+            .row div{
+                padding: 2px;
+                border: 1px solid black;
+            }
+        </style>
+</head>
+
+<body>
+    <!-- container class gives equal margin and padding from either side of the web page
+    top,left,bottom right and content looks like in the justified in the middle.
+    -->
+<!-- <div class="container">
+    <div class="row" style="background: aqua">
+     <div class="col-lg-4">col-lg-4
+     <div class="row">
+         <div class="col-lg-4">nested col </div>
+         <div class="col-lg-6">nested col </div>
+         <div class="col-lg-2">nested col </div>
+     </div>
+     <div class="row">
+            <div class="col-lg-4">nested col </div>
+            <div class="col-lg-4">nested col </div>
+            <div class="col-lg-4">nested col </div>
+        </div>
+
+     </div>
+     <div class="col-lg-6">col-lg-6
+         <div class="row">
+         <div class="col-lg-2">col-lg-2</div>
+         <div class="col-lg-8">col-lg-8</div>
+         <div class="col-lg-2">col-lg-2</div>
+         </div>
+     </div>
+     <div class="col-lg-2">col-lg-2</div>
+    </div>
+</div> -->
+<!--
+In bootstrap we have to create one container as our main content container inside which
+we have one row which can divide in 12 units as a column
+to nest again within a column again we have to create  row and again it can be divide among 12 columns
+ -->
+ <!-- <div class="container">
+     <div class="row" style="background:aqua">
+      <div class="col-lg-6">
+          col-lg-6
+      </div>
+      <div class="col-lg-6">
+          col-lg-6
+      </div>
+     </div>
+     <div class="row">
+       <div class="col-lg-2">col-lg-2</div>
+       <div class="col-lg-6">col-lg-6</div>
+       <div class="col-lg-4">col-lg-4</div>
+     </div
+ </div> -->
+ <!-- Jumbotron has curved edge
+while jumbotron-fluid had no curved edge
+-->
+         <div class="jumbotron jumbotron-fluid bg-info text-white text-center" >
+            <div class="container ">
+                    <h1 class="display-4">Welcome to my site</h1>
+                    <p class="lead">Hello this my first paragraph</p>
+            </div>
+         </div>
+<!-- Padding
+py  is for up and down padding y denotes y axis
+px is for left and right padding x denotes x axis
+
+similarly for margins
+my is for margin up and down
+mx is for margin left and right
+-->
+<h2 class="display-4 text-center py-3">
+    welcome to website
+</h2>
+
+<nav class="nav justify-content-center nav-pills flex-column flex-md-row">
+    <a class="nav-link active" href="#about" data-toggle="tab">about</a>
+    <a class="nav-link" href="#home" data-toggle="tab">home</a>
+    <a class='nav-link' href="#abc" data-toggle="tab">abc</a>
+    <a class="nav-link" href="#xyz" data-toggle="tab">xyz</a>
+</nav>
+<div class="tab-content">
+    <div class="tab-pane active" id="about">
+        <h1>this is About tab</h1>
+    </div>
+   <div class="tab-pane" id="home">
+    <h1>This is Home tab</h1>
+   </div>
+   <div class="tab-pane" id="abc">
+    <h1>This abc tab</h1>
+   </div>
+   <div class="tab-pane" id="xyz">
+    <h1>This is xyz tab</h1>
+   </div>
+</div>
+
+<nav class="nav nav-pills justify-content-center flex-column flex-md-row">
+    <a class="nav-link active" href="#pr1" data-toggle="tab">Product 1</a>
+    <a class="nav-link" href="#pr2" data-toggle="tab">Product 2</a>
+    <a class="nav-link" href="#pr3" data-toggle="tab">Product 3</a>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" id="pr1">
+<h1>This is heading1</h1>
+</div>
+<div class="tab-pane" id="pr2">
+<h2>This is heading 2</h2>
+</div>
+<div class="tab-pane" id="pr3">
+    <h2>This is heading 3</h2>
+</div>
+</div>
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
